@@ -1,0 +1,29 @@
+%h1 Listing houses
+
+%table
+  %thead
+    %tr
+      %th Website
+      %th Name
+      %th Address
+      %th Occupancy
+      %th Description
+      %th
+      %th
+      %th
+
+  %tbody
+    - @houses.each do |house|
+      %tr
+        %td= house.website
+        %td= house.name
+        %td= house.address
+        %td= house.occupancy
+        %td= house.description
+        %td= link_to 'Show', house
+        %td= link_to 'Edit', edit_house_path(house)
+        %td= link_to 'Destroy', house, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New House', new_house_path
