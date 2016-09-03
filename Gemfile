@@ -11,6 +11,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'haml-rails', "~> 0.9"
 gem 'devise'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'pry-byebug', platform: :mri
