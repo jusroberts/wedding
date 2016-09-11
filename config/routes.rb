@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :songs
   get '/' => 'wedding#index', as: :index
   get 'schedule' => 'wedding#schedule', as: :schedule
 
