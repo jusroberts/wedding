@@ -11,10 +11,12 @@
       %ul.nav.navbar-nav
         %li
           =link_to "Schedule", schedule_path
+        -# %li
+        -#   =link_to "The House", houses_path
+        -# %li
+        -#   =link_to "RSVP", reservations_path
         %li
-          =link_to "The House", houses_path
-        %li
-          =link_to "RSVP", reservations_path
+          =link_to "Requests", songs_path
       %ul.nav.navbar-nav.navbar-right
         -if current_user
           %li.dropdown
@@ -31,5 +33,5 @@
               %li.divider{:role => "separator"}
               %li
                 %a{:href => "#"} Separated link
-        -else
-          %li=link_to "Log In", new_user_session_path
+        -# -else
+        -#   %li=link_to "Log In", new_user_session_path
