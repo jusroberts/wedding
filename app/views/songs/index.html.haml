@@ -1,11 +1,10 @@
 %h1 Requested songs
-= link_to 'Add a song', new_song_path, class: "btn btn-primary"
-
+%p= link_to 'Request a song', new_song_path, class: "btn btn-primary"
 %table.table.table-striped
   %thead.thead
     %tr
-      %th Title
-      %th Artist
+      %th.col-xs-6= sortable "title"
+      %th.col-xs-6= sortable "artist"
   %tbody
     - @songs.each do |song|
       %tr
