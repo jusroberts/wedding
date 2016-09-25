@@ -4,4 +4,7 @@ class WeddingController < ApplicationController
 
   def schedule
   end
+
+  def faqs
+  end
 end
