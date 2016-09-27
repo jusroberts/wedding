@@ -1,0 +1,16 @@
+= form_for @song do |f|
+  - if @song.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@song.errors.count, "error")} prohibited this song from being saved:"
+      %ul
+        - @song.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    .col-xs-1= f.label :title, "Song"
+    = f.text_field :title, placeholder: "ex: Que' Onda Guero"
+  .form-group
+    .col-xs-1= f.label :artist
+    = f.text_field :artist, placeholder: "ex: Beck"
+  .actions
+    = f.submit 'Save', class: "btn btn-primary"

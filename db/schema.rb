@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160828132713) do
+ActiveRecord::Schema.define(version: 20160911160656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,23 @@ ActiveRecord::Schema.define(version: 20160828132713) do
     t.integer  "house_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_reservations_on_user_id", unique: true, using: :btree
+  end
+
+  create_table "song_votes", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "song_id"], name: "index_song_votes_on_user_id_and_song_id", unique: true, using: :btree
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.string   "title"
+    t.string   "artist"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["title", "artist"], name: "index_songs_on_title_and_artist", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade do |t|
