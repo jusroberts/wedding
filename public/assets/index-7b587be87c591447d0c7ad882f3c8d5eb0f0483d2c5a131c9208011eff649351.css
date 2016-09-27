@@ -1,0 +1,19 @@
+/* line 1, /Users/cchatham/wedding/wedding/app/assets/stylesheets/index.scss */
+.jumbotron {
+  background: no-repeat center;
+  background-image: url(/assets/hawaii_ocean_bg2-25493cf4230e11034fa180b83eff08e0b32f7604e2a3cee42d59e185799a2751.JPG);
+  height: 100vh;
+  margin-bottom: 0;
+  background-size: cover;
+  padding: 40% 20%;
+}
+
+/* line 10, /Users/cchatham/wedding/wedding/app/assets/stylesheets/index.scss */
+.navbar {
+  margin-bottom: 0;
+}
+
+/* line 14, /Users/cchatham/wedding/wedding/app/assets/stylesheets/index.scss */
+h1 {
+  text-align: center;
+}
