@@ -1,16 +1,23 @@
-.jumbotron {
-    background: no-repeat;
-    background-image: image-url('hawaii_ocean_bg2.JPG');
-    height: 100vh;
-    margin-bottom: 0;
-    background-size: contain;
-}
+// .jumbotron {
+//     background: no-repeat;
+//     background-image: image-url('hawaii_ocean_bg2.JPG');
+//     height: 100vh;
+//     margin-bottom: 0;
+//     background-size: contain;
+// }
 
 .navbar {
     margin-bottom: 0;
 }
 
-.jumbotron h1 {
+h1 {
     text-align: center;
     color: white;
+}
+body{
+  background: url('hawaii_ocean_bg2.JPG') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
