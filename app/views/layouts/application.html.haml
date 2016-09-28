@@ -8,5 +8,8 @@
     = javascript_include_tag 'application'
   %body
     = render '/layouts/nav'
-    .container
-      = yield
+    -if @container
+      .container
+        = yield
+    -else
+      =yield

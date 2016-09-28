@@ -1,5 +1,6 @@
 class WeddingController < ApplicationController
   def index
+    @container = false
   end
 
   def schedule
