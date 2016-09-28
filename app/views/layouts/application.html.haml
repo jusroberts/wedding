@@ -9,4 +9,8 @@
     = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Gabriela"
   %body
     = render '/layouts/nav'
-    = yield
+    -if @container
+      .container
+        = yield
+    -else
+      =yield
