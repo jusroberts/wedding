@@ -1,20 +1,13 @@
-// .jumbotron {
-//     background: no-repeat;
-//     background-image: image-url('hawaii_ocean_bg2.JPG');
-//     height: 100vh;
-//     margin-bottom: 0;
-//     background-size: contain;
-// }
-
 .navbar {
     margin-bottom: 0;
     background-color: white;
     border-color: white;
 }
-
 h1 {
     text-align: center;
     color: white;
+    font-size: 5em;
+    margin-top: 4.5em;
 }
 body{
   background: url('hawaii_ocean_bg2.JPG') no-repeat center center fixed;
@@ -23,9 +16,8 @@ body{
   -o-background-size: cover;
   background-size: cover;
 }
-
-
 .subtitle {
     color: white;
-    font-size: 0.5em;
+    font-size: 1.25em;
+    text-align: center;
 }
