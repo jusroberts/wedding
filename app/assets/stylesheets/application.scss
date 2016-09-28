@@ -23,3 +23,11 @@ body {
 navbar {
     background-color: white;
 }
+h1 {
+    text-align: center;
+}
+@media (min-width: 1200px) {
+    .container-fluid.info-port {
+        padding: 0 8em 0 8em;
+    }
+}
