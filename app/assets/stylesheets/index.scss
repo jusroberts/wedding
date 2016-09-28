@@ -1,5 +1,5 @@
 .jumbotron {
-    background: no-repeat center;
+    background: no-repeat;
     background-image: image-url('hawaii_ocean_bg2.JPG');
     height: 100vh;
     margin-bottom: 0;
@@ -10,7 +10,7 @@
     margin-bottom: 0;
 }
 
-h1 {
+.jumbotron h1 {
     text-align: center;
-    margin-top: 5em;
+    color: white;
 }
