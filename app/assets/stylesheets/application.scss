@@ -19,12 +19,21 @@
 
 body {
     font-family: 'Gabriela', serif;
+    font-size: 16px;
 }
-navbar {
+.navbar-default {
     background-color: white;
+    border-color: white;
+}
+.navbar {
+    margin-bottom: 0;
 }
 h1 {
     text-align: center;
+}
+p.subtitle, a.subtitle {
+    text-align: center;
+    color:grey;
 }
 @media (min-width: 1200px) {
     .container-fluid.info-port {
