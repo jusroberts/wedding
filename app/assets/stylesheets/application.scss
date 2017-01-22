@@ -41,3 +41,19 @@ p.subtitle, a.subtitle {
         padding: 0 8em 0 8em;
     }
 }
+div.field, div.actions {
+    margin: 1em 0 1em 0;
+}
+.center-div {
+    margin: 0 auto;
+    width: 50%;
+}
+form {
+    padding: 1em;
+    .field > label {
+        width: 5em;
+    }
+}
+.btn-primary {
+    background-color: #1C6BA0;
+}
