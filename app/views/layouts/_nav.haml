@@ -8,8 +8,8 @@
         %span.icon-bar
       %a.navbar-brand{:href => "/"}= icon "home"
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      -if current_user
-        %ul.nav.navbar-nav
+      %ul.nav.navbar-nav.navbar-right
+        -if current_user
           %li
             =link_to "Schedule", schedule_path
           %li
@@ -20,21 +20,5 @@
             =link_to "Requests", songs_path
           %li
             =link_to "FAQs", faqs_path
-      %ul.nav.navbar-nav.navbar-right
-        -if current_user
-          %li.dropdown
-            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              user stuff
-              %span.caret
-            %ul.dropdown-menu
-              %li
-                %a{:href => "#"} Action
-              %li
-                %a{:href => "#"} Another action
-              %li
-                %a{:href => "#"} Something else here
-              %li.divider{:role => "separator"}
-              %li
-                %a{:href => "#"} Separated link
         -else
           %li=link_to "Log In", new_user_session_path
