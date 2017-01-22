@@ -1,7 +1,7 @@
 <div class="center-div">
     <h2>Login</h2>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "center-div" }) do |f| %>
       <div class="field">
         <%= f.label :email, "Username" %>
         <%= f.email_field :email, autofocus: true %>
