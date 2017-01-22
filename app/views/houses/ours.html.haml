@@ -1,11 +1,24 @@
+%script{:src => "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAkRDQqaPLETn_IBUxU700hglkUymB6gCc "}
+
 %h1 Reception
-%div.col-md-6
-  =image_tag "house.10", class: "img-rounded house"
-%div.col-med-6
-  %h4 Location:
-  %p 38 Santa Clara Street, Santa Rosa Beach, FL
-  %h4 Time:
-  %p 5:00pm for Cocktails & Pictures
-  %h4 Dress Code:
-  %p Smart Casual or Summer Cocktail. Tie preferred. Jacket Optional.
+.row
+  %div.col-md-6
+    =image_tag "house.10", class: "img-rounded house"
+  %div.col-md-6
+    %h4 Location:
+    %p=link_to "38 Santa Clara Street, Santa Rosa Beach, FL", "https://www.google.com/maps/place/38+Santa+Clara+St,+Santa+Rosa+Beach,+FL+32459/@30.3150088,-86.1212235,17z/data=!3m1!4b1!4m5!3m4!1s0x8893e514007d8d23:0x40126c91010501f9!8m2!3d30.3150088!4d-86.1190348", target: "_blank"
+    %h4 Time:
+    %p 5:00pm for Cocktails & Pictures
+    %h4 Dress Code:
+    %p Smart Casual or Summer Cocktail. Tie preferred. Jacket Optional.
+.row{:style => "margin-top: 1em"}
+  %div.col-md-6
+    %div{:style => "overflow:hidden;height:400px;"}
+      #gmap_canvas{:style => "height:400px;"}
+      :css
+        #gmap_canvas img{max-width:none!important;background:none!important}
+    %a{:href => "https://embed-map.org/"} add bing map to website
+%script{:src => "https://embedmaps.com/google-maps-authorization/script.js?id=ed1176a1a2bd1fab4889b14f684179eae6bce9a6", :type => "text/javascript"}
+:javascript
+  function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(30.3150088,-86.11903480000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(30.3150088,-86.11903480000001)});infowindow = new google.maps.InfoWindow({content:'<strong>Beuno Vista</strong><br>38 Santa Clara Street<br>32459 Santa Rosa Beach<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
 
