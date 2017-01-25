@@ -17,26 +17,52 @@
 @import "font-awesome";
 @import "songs";
 
+$gray: #777;
+$ocean: #1C6BA0;
+
 body {
     font-family: 'Gabriela', serif;
     font-size: 16px;
 }
+a {
+    color: $ocean;
+}
 .navbar-default {
     background-color: white;
     border-color: white;
+    color: $gray;
 }
 .navbar {
     margin-bottom: 0;
 }
-h1 {
+h1, h2 {
     text-align: center;
+    margin-bottom: 1em;
 }
 p.subtitle, a.subtitle {
     text-align: center;
-    color:grey;
+    color: $gray;
 }
 @media (min-width: 1200px) {
     .container-fluid.info-port {
         padding: 0 8em 0 8em;
     }
+}
+div.field, div.actions {
+    margin: 1em 0 1em 0;
+}
+.center-div {
+    margin: 0 auto;
+    width: 50%;
+}
+form {
+    .field > label {
+        width: 5em;
+    }
+}
+.btn-primary {
+    background-color: $ocean;
+}
+.house {
+    width: 100%;
 }
