@@ -11,14 +11,38 @@
     %p 5:00pm for Cocktails & Pictures
     %h4 Dress Code:
     %p Smart Casual or Summer Cocktail. Tie preferred. Jacket Optional.
-.row{:style => "margin-top: 1em"}
-  %div.col-md-12
-    %div{:style => "overflow:hidden;height:400px;"}
-      #gmap_canvas{:style => "height:400px;"}
+    %h4 Parking:
+    %p
+      Parking will be very limited. Please try to take a taxi, Uber, or Lyft to the location. Please contact
+      =mail_to "cchatham11@gmail.com", "Christina"
+      with questions.
+    %h4 Flying in?
+    %p Closest Airport is Northwest Florida Beaches International Airport (ECP).
+.row{style: "margin-top: 1em;"}
+  %div.col-md-6
+    %div{:style => "overflow:hidden;height:150px;"}
+      #gmap_canvas{:style => "height:150px;"}
       :css
-        #gmap_canvas img{max-width:none!important;background:none!important}
-    %a{:href => "https://embed-map.org/"} add bing map to website
+        #gmap_canvas img{width:50%;background:none!important}
+    %a{:href => "https://embed-map.org/"} Embed
 %script{:src => "https://embedmaps.com/google-maps-authorization/script.js?id=ed1176a1a2bd1fab4889b14f684179eae6bce9a6", :type => "text/javascript"}
 :javascript
-  function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(30.3150088,-86.11903480000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(30.3150088,-86.11903480000001)});infowindow = new google.maps.InfoWindow({content:'<strong>Beuno Vista</strong><br>38 Santa Clara Street<br>32459 Santa Rosa Beach<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+  function init_map(){
+    var myOptions = {
+      zoom:12,
+      center:new google.maps.LatLng(30.3150088,-86.11903480000001),
+      mapTypeId: google.maps.MapTypeId.ROADMAP};
+    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+    marker = new google.maps.Marker({
+      map:
+        map,
+      position: new google.maps.LatLng(30.3150088,-86.11903480000001)
+    });
+    infowindow = new google.maps.InfoWindow({
+      content:'<strong>Bueno Vista</strong><br>38 Santa Clara Street<br>32459 Santa Rosa Beach<br>'
+    });
+    google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+    infowindow.open(map,marker);
+   }
+   google.maps.event.addDomListener(window, 'load', init_map);
 
