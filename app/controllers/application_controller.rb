@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   def enable_container
     @container = true
   end
+
+  def after_sign_in_path_for(resource)
+    aboutus_path
+  end
 end
