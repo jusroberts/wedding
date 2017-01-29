@@ -1,0 +1,32 @@
+%h1 Justin & Christina
+.row
+  %div.col-md-6
+    #selfieCarousel.carousel.slide{"data-ride" => "carousel", style: "height:500px;overflow:hidden;"}
+      %ol.carousel-indicators
+        %li.active{"data-target" => "#selfieCarousel", "data-slide-to" => "0"}
+        %li{"data-target" => "#selfieCarousel", "data-slide-to" => "1"}
+        %li{"data-target" => "#selfieCarousel", "data-slide-to" => "2"}
+        %li{"data-target" => "#selfieCarousel", "data-slide-to" => "3"}
+      %div.carousel-inner{:role => "listbox"}
+        - @images.each_with_index do |image, i|
+          %div{class: "#{i == 0 ? 'item active' : 'item'}"}
+            = image_tag "selfies/#{image.split('/').last}", alt: "image_" + i.to_s, style: "max-width: 500px; max-height: 500px;margin: 0 auto;"
+      %a.left.carousel-control{href: "#selfieCarousel", role: "button", "data-slide" => "prev", style: "background:none;"}
+        %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true", style: "color: #777;"}
+        %span.sr-only Previous
+      %a.right.carousel-control{href: "#selfieCarousel", role: "button", "data-slide" =>"next", style: "background:none;"}
+        %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true", style: "color: #777;"}
+        %span.sr-only Next
+  %div.col-md-6
+    %h3 About Us
+    %p
+      Justin first met Christina on a job interview for a Software Engineer position at Careerbuilder. They were on the
+      same software development team for several months until the team was split up as part of a new technological direction
+      for the whole company. This is when Christina asked Justin out for a drink and the rest is history...
+    %p
+      Together Justin and Christina have adopted Zoey, a girlfriend rabbit for Christina's rabbit Marco and Denali,
+      a mixed breed rescue dog. They like to hike, travel, eat, and watch collegiate football. They both graduated from Georgia Tech
+      and both currently work at Salesforce. While Justin and Christina have several commonalities, their relationship is
+      very Yin and Yang with Justin being the more laid back personality and Christina being the more sassy personality.
+      Justin likes the mountain vacations where Christina likes the beach. Justin is a coffee connoisseur while Christina is
+      just fine with Starbucks. Their relationship is one of balance and compromise which only makes them stronger.

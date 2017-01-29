@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'schedule' => 'wedding#schedule', as: :schedule
   get 'faqs' => 'wedding#faqs', as: :faqs
   get 'thehouse' => 'houses#ours', as: :ours
+  get 'about-us' => 'wedding#aboutus', as: :aboutus
 
   resources :houses
   resources :reservations
